@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>React without build steps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.22.9/babel.min.js"></script>
+
+  <script type="module">
+    window.app = {};
+  </script>
+  <script type="text/babel" src="./Hello.js"></script>
+  <script type="module" src="./mathUtils.js"></script>
+  <script type="module" src="./main.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    const { add } = window.app.mathUtils;
+
+
+    const App = () => {
+      const [counter, setCounter] = React.useState(add(11, 31));
+
+      const handleClick = (() => {
+        setCounter(counter + 1)
+      })
+      // const results = add(12, 32);
+      // console.log('results:', results)
+
+      return (
+        <div>
+          <pre>Welcome</pre>
+          <Hello counter={counter} handleClick={handleClick} />
+          {/*
+           <p>
+             <label>square(7)={window.square(7)}</label>
+           </p>*/}
+        </div>
+      )
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+
+  <script>
+
+    // console.log('square(9):', square(9));
+  </script>
+</body>
+
+</html>
