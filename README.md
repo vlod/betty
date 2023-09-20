@@ -1,2 +1,5 @@
-# betty
-Next steps for Elizabeth
+# Atomic Betty
+
+Next steps for Elizabeth.
+
+Access me here: [https://vlod.github.io/betty/](Betty)
