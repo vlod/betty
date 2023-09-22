@@ -1,4 +1,4 @@
-import engine from "/static/js/engine.js";
+import engine from "./engine.js";
 
 let engineData;
 
