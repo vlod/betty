@@ -2,4 +2,4 @@
 
 Next steps for Elizabeth.
 
-Access me here: [https://vlod.github.io/betty/](Betty)
+Access me here: [Betty](https://vlod.github.io/betty)
