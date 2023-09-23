@@ -111,4 +111,13 @@ const setupClickEvents = () => {
 };
 
 setupClickEvents();
+
+// load initial script
+fetch("https://vlod.github.io/betty/static//Elizabeth.txt")
+  .then((res) => res.text())
+  .then((results) => {
+    const textarea = document.getElementById("schema");
+    textarea.value = results;
+  });
+
 export { applyButtonClick, setupClickEvents, switchTabTo };
