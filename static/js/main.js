@@ -118,6 +118,7 @@ fetch("https://vlod.github.io/betty/static//Elizabeth.txt")
   .then((results) => {
     const textarea = document.getElementById("schema");
     textarea.value = results;
+    applyButtonClick("schema");
   });
 
 export { applyButtonClick, setupClickEvents, switchTabTo };
