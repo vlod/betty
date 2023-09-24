@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <title>Call Me Betty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="static/styles/main.css" rel="stylesheet">
-  <script type="module" src="static/js/main.js"></script>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <link href="./static/styles/main.css" rel="stylesheet">
+  <script type="module" src="./static/js/engine.js"></script>
+  <script type="module" src="./static/js/main.js"></script>
 </head>
 
 <body>
@@ -18,14 +20,32 @@
     <button id="schema-apply">Apply</button>
   </div>
 
+  <form id="user-input-form">
+    <div class="user-input-wrapper">
+      <label>Please type your input:</label>
+      <input type="text" />
+      <button id="user-input-apply">Enter</button>
+    </div>
+  </form>
+
+  <div class="betty-response-wrapper">
+    <label>Betty says:</label>
+    <input id="betty-response" type="text" readonly />
+  </div>
+
   <div class="tabs">
     <div class="links">
-      <a id="tab-link-input" href="#" class="tab-link-selected">Input Transforms</a>
+      <a id="tab-link-log" href="#" class="tab-link-selected">Log</a>
+      <a id="tab-link-input" href="#">Input Transforms</a>
       <a id="tab-link-output" href="#">Output Transforms</a>
       <a id="tab-link-messages" href="#">Message</a>
     </div>
+
     <div class="tab-wrapper">
-      <div id="tab-input" class="tab tab-selected"></div>
+      <div id="tab-log" class="tab tab-selected">
+        <ul></ul>
+      </div>
+      <div id="tab-input" class="tab "></div>
       <div id="tab-output" class="tab"></div>
       <div id="tab-messages" class="tab"></div>
     </div>

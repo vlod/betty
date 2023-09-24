@@ -66,3 +66,26 @@ body {
 .tabs .tab-wrapper .tab-selected{
   display: block;
 }
+
+.user-input-wrapper, .betty-response-wrapper {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.user-input-wrapper label, .betty-response-wrapper label {
+  margin-bottom: 5px;
+}
+.user-input-wrapper input, .betty-response-wrapper input {
+  padding: 12px;
+  font-size: 1.1rem;
+}
+.user-input-wrapper button {
+  max-width: 6rem;
+  padding: 0 20px;
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.tab-wrapper li {
+  padding-bottom: 4px;
+}
