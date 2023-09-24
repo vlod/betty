@@ -1,4 +1,4 @@
-import engine from "/betty/static/js/engine.js";
+import engine from "static/js/engine.js";
 
 let engineData;
 
